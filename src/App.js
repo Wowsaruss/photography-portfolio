@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { LightRed } from './colors';
 import HeroPage from './pages/Hero';
 import Navbar from './pages/Navbar';
+import AboutMe from './pages/AboutMe';
 
 const MainWrapper = styled('div')``;
-
-const AboutMe = styled('div')`
-  height: 400px;
-  background-color: ${LightRed};
-`;
 
 const Service = styled('div')`
   height: 79vh;
@@ -21,9 +16,7 @@ class App extends Component {
       <MainWrapper>
         <Navbar />
         <HeroPage />
-        <AboutMe>
-          <h2>A Little About Me</h2>
-        </AboutMe>
+        <AboutMe />
         <Service>SERVICE</Service>
       </MainWrapper>
     );
