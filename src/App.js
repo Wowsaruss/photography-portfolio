@@ -3,12 +3,9 @@ import styled from 'styled-components';
 import HeroPage from './pages/Hero';
 import Navbar from './pages/Navbar';
 import AboutMe from './pages/AboutMe';
+import Services from './pages/Services';
 
 const MainWrapper = styled('div')``;
-
-const Service = styled('div')`
-  height: 79vh;
-`;
 
 class App extends Component {
   render() {
@@ -17,7 +14,7 @@ class App extends Component {
         <Navbar />
         <HeroPage />
         <AboutMe />
-        <Service>SERVICE</Service>
+        <Services />
       </MainWrapper>
     );
   }
