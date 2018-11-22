@@ -8,10 +8,17 @@ import Services from './pages/Services';
 const MainWrapper = styled('div')``;
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      navOpen: true
+    };
+  }
+
   render() {
     return (
       <MainWrapper>
-        <Navbar />
+        {this.state.navOpen ? <Navbar /> : <div />}
         <HeroPage />
         <AboutMe />
         <Services />
