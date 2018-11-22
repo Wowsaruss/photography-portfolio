@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import hamburger from '../assets/hamburger.svg';
 import { LightRed } from '../colors';
 
 const NavMain = styled('div')`
@@ -9,9 +10,23 @@ const NavMain = styled('div')`
   border-bottom: 0.2px solid ${LightRed};
 `;
 
+const Hamburger = styled('img')``;
+
+const NavLink = styled('a')``;
+
 class Navbar extends Component {
   render() {
-    return <NavMain>HELLO WORLD</NavMain>;
+    return (
+      <NavMain>
+        <Hamburger src={hamburger} alt="" />
+        <NavLink href="/">HOME</NavLink>
+        <NavLink href="/">ABOUT</NavLink>
+        <NavLink href="/">SERVICE</NavLink>
+        <NavLink href="/">PORTFOLIO</NavLink>
+        <NavLink href="/">BLOG</NavLink>
+        <NavLink href="/">CONTACT</NavLink>
+      </NavMain>
+    );
   }
 }
 
