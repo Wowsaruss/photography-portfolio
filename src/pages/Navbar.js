@@ -8,11 +8,17 @@ const NavMain = styled('div')`
   background-color: white;
   color: black;
   border-bottom: 0.2px solid ${LightRed};
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 `;
 
 const Hamburger = styled('img')``;
 
-const NavLink = styled('a')``;
+const NavLink = styled('a')`
+  text-decoration: none;
+  color: black;
+`;
 
 class Navbar extends Component {
   render() {
