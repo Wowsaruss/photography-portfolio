@@ -14,7 +14,7 @@ const Hero = styled('div')`
 `;
 
 const Title = styled('code')`
-  margin-bottom: 135px;
+  margin-bottom: 160px;
 `;
 const G = styled('span')`
   font-size: 4em;
