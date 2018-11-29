@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 import hamburger from '../assets/hamburger.svg';
-import { LightRed } from '../colors';
+import { LightRed, LightGray } from '../colors';
 
-const NavMain = styled('div')``;
+const NavMain = styled('div')`
+  position: sticky;
+  top: 0;
+`;
 
 const Open = styled('div')`
   height: 125px;
-  background-color: white;
+  padding-left: 55px;
+  background-color: ${LightGray};
   color: black;
   border-bottom: 0.2px solid ${LightRed};
   display: flex;
@@ -16,15 +20,26 @@ const Open = styled('div')`
 `;
 
 const Closed = styled('div')`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 125px;
+  width: 145px;
 `;
 
-const HamburgerButton = styled('div')``;
+const HamburgerButton = styled('div')`
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 
 const Hamburger = styled('img')``;
 
 const LinkWrapper = styled('div')`
-  width: 50%;
+  padding-right: 50px;
+  width: 500px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -61,7 +76,7 @@ class Navbar extends Component {
   constructor() {
     super();
     this.state = {
-      navOpen: true
+      navOpen: false
     };
   }
 

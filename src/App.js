@@ -4,8 +4,11 @@ import HeroPage from './pages/Hero';
 import Navbar from './pages/Navbar';
 import AboutMe from './pages/AboutMe';
 import Services from './pages/Services';
+import { DarkBlue } from './colors';
 
-const MainWrapper = styled('div')``;
+const MainWrapper = styled('div')`
+  background-color: ${DarkBlue};
+`;
 
 class App extends Component {
   constructor(props) {

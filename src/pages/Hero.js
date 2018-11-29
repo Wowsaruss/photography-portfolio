@@ -1,15 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import logo from '../assets/logo.svg';
+import { DarkBlue, LightGray, Blue, LimeGreen } from '../colors';
 import '../App.css';
 
-const Code = styled('code')`
-  font-size: 3em;
-  padding-bottom: 60px;
-  color: black;
-`;
-
 const Hero = styled('div')`
+  background-color: ${DarkBlue};
   height: 79vh;
   display: flex;
   flex-direction: column;
@@ -18,12 +13,39 @@ const Hero = styled('div')`
   align-content: center;
 `;
 
+const Title = styled('code')`
+  margin-bottom: 135px;
+`;
+const G = styled('span')`
+  font-size: 4em;
+  padding-bottom: 60px;
+  color: ${LightGray};
+`;
+const B = styled('span')`
+  font-size: 4em;
+  padding-bottom: 60px;
+  color: ${Blue};
+`;
+const L = styled('span')`
+  font-size: 4em;
+  padding-bottom: 60px;
+  color: ${LimeGreen};
+`;
+
 class HeroPage extends Component {
   render() {
     return (
       <Hero>
-        <Code>{'const {Russell, Hayes} = helloMyNameIs;'}</Code>
-        <img src={logo} className="App-logo" alt="logo" />
+        <Title>
+          <G>{'const { '}</G>
+          <B>{'Russell'}</B>
+          <G>{', '}</G>
+          <B>{'Hayes'}</B>
+          <G>{' }'}</G>
+          <L>{' = '}</L>
+          <B>{'helloMyNameIs'}</B>
+          <G>{';'}</G>
+        </Title>
       </Hero>
     );
   }
