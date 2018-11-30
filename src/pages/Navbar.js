@@ -97,32 +97,32 @@ class Navbar extends Component {
               <Hamburger src={hamburger} alt="" />
             </HamburgerButton>
             <LinkWrapper>
-              <NavLink href="/">
+              <NavLink href="#home">
                 <i class="fas fa-home" />
                 <LinkText>HOME</LinkText>
                 <UnderLine>--------</UnderLine>
               </NavLink>
-              <NavLink href="/">
+              <NavLink href="#about">
                 <i class="fas fa-quote-left" />
                 <LinkText>ABOUT</LinkText>
                 <UnderLine>--------</UnderLine>
               </NavLink>
-              <NavLink href="/">
+              <NavLink href="#services">
                 <i class="fas fa-globe-americas" />
                 <LinkText>SERVICE</LinkText>
                 <UnderLine>----------</UnderLine>
               </NavLink>
-              <NavLink href="/">
+              <NavLink href="#portfolio">
                 <i class="far fa-image" />
                 <LinkText>PORTFOLIO</LinkText>
                 <UnderLine>------------</UnderLine>
               </NavLink>
-              <NavLink href="/">
+              <NavLink href="#blog">
                 <i class="fa fa-fw fa-rss" />
                 <LinkText>BLOG</LinkText>
                 <UnderLine>-------</UnderLine>
               </NavLink>
-              <NavLink href="/">
+              <NavLink href="#contact">
                 <i class="far fa-envelope" />
                 <LinkText>CONTACT</LinkText>
                 <UnderLine>-----------</UnderLine>
