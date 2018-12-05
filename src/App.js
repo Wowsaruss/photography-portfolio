@@ -33,14 +33,14 @@ class App extends Component {
         <ScrollableAnchor id={'services'}>
           <Services />
         </ScrollableAnchor>
+        <ScrollableAnchor id={'portfolio'}>
+          <Portfolio />
+        </ScrollableAnchor>
         <ScrollableAnchor id={'blog'}>
           <Blog />
         </ScrollableAnchor>
         <ScrollableAnchor id={'contact'}>
           <Contact />
-        </ScrollableAnchor>
-        <ScrollableAnchor id={'portfolio'}>
-          <Portfolio />
         </ScrollableAnchor>
       </MainWrapper>
     );
