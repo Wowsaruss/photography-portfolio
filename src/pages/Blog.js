@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
-import { LightGray } from '../colors';
+import { DarkBlue } from '../colors';
 
 const BlogMain = styled('div')`
   height: 100vh;
-  background-color: ${LightGray};
+  background-color: ${DarkBlue};
 `;
 
 class Blog extends Component {

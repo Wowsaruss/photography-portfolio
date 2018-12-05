@@ -5,14 +5,25 @@ import { LightGray } from '../colors';
 const AboutMeMain = styled('div')`
   height: 400px;
   background-color: ${LightGray};
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const About = styled('span')`
+  color: yellow;
 `;
 
 class AboutMe extends Component {
   render() {
     return (
       <AboutMeMain>
-        &dArr;
-        <h2>A Little About Me</h2>
+        <h2>
+          A Little
+          <About> About </About>
+          Me
+        </h2>
+
         <p>
           I am enough of an artist to draw freely upon my imagination. The point
           is that when I see a sunset or a waterfall or something, for a split
