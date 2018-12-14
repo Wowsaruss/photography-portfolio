@@ -40,12 +40,6 @@ class Contact extends Component {
     return (
       <ContactMain>
         <h1>CONTACT</h1>
-        {/* <form
-          class="gform pure-form pure-form-stacked"
-          method="POST"
-          data-email="example@email.net"
-          action="https://script.google.com/macros/s/AKfycbyYNOgI3-k5UpHEYhrPpqeWzpWTQ6KgM7pNnkNyOXMX7587lOM/exec"
-        /> */}
         <form
           class="gform pure-form pure-form-stacked"
           method="POST"
