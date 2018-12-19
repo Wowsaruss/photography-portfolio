@@ -7,6 +7,69 @@ const ContactMain = styled('div')`
   background-color: ${LightGray};
 `;
 
+const FormWrapper = styled('div')`
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+`;
+
+const InputTitle = styled('h3')`
+  margin: 0px;
+`;
+
+const NameWrapper = styled('div')`
+  display: flex;
+  flex-direction: row;
+`;
+
+const Names = styled('label')`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+`;
+
+const Name = styled('input')`
+  width: 200px;
+  height: 30px;
+  box-sizing: border-box;
+  padding: -0px
+  ::placeholder {
+    color: grey;
+    font-size: 20px;
+  }
+`;
+
+const ContactWrapper = styled('form')``;
+
+const EmailInput = styled('input')`
+  width: 450px;
+  height: 30px;
+`;
+
+const TextBox = styled('textarea')`
+  width: 450px;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+`;
+
+const SubmitButton = styled('input')`
+  width: 450px;
+  height: 60px;
+  background-color: #ffffff;
+  border: 1px solid black;
+  color: #000000;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+`;
+
 class Contact extends Component {
   constructor() {
     super();
@@ -40,54 +103,50 @@ class Contact extends Component {
     return (
       <ContactMain>
         <h1>CONTACT</h1>
-        <form
+        <FormWrapper
           class="gform pure-form pure-form-stacked"
           method="POST"
           data-email="example@email.net"
           action="https://script.google.com/macros/s/AKfycbyYNOgI3-k5UpHEYhrPpqeWzpWTQ6KgM7pNnkNyOXMX7587lOM/exec">
+          <NameWrapper>
+            <Names>
+              <InputTitle>Name</InputTitle>
+              <Name
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="First"
+                value={this.state.firstName}
+                onChange={this.handleFirstName}
+              />
+            </Names>
+            <Names>
+              <Name
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Last"
+                value={this.state.lastName}
+                onChange={this.handleLastName}
+              />
+            </Names>
+          </NameWrapper>
+          <ContactWrapper>
+            <label>
+              <InputTitle>Email</InputTitle>
+              <EmailInput
+                type="text"
+                id="email"
+                name="email"
+                placeholder="your@email.com"
+                value={this.state.email}
+                onChange={this.handleEmail}
+              />
+            </label>
+          </ContactWrapper>
           <label>
-            First Name:
-            <input
-              type="text"
-              id="firstName"
-              name="firstName"
-              value={this.state.firstName}
-              onChange={this.handleFirstName}
-            />
-          </label>
-          <label>
-            Last Name:
-            <input
-              type="text"
-              id="lastName"
-              name="lastName"
-              value={this.state.lastName}
-              onChange={this.handleLastName}
-            />
-          </label>
-          <label>
-            Phone:
-            <input
-              type="text"
-              id="phone"
-              name="phone"
-              value={this.state.phone}
-              onChange={this.handlePhone}
-            />
-          </label>
-          <label>
-            Email:
-            <input
-              type="text"
-              id="email"
-              name="email"
-              value={this.state.email}
-              onChange={this.handleEmail}
-            />
-          </label>
-          <label>
-            Message:
-            <textarea
+            <InputTitle>Message</InputTitle>
+            <TextBox
               type="text"
               id="message"
               name="message"
@@ -95,8 +154,8 @@ class Contact extends Component {
               onChange={this.handleMessage}
             />
           </label>
-          <input type="submit" value="Submit" />
-        </form>
+          <SubmitButton type="submit" value="SUBMIT" />
+        </FormWrapper>
       </ContactMain>
     );
   }
