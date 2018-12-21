@@ -15,6 +15,8 @@ const FormWrapper = styled('div')`
   align-items: center;
 `;
 
+const ContactWrapper = styled('form')``;
+
 const InputTitle = styled('h3')`
   margin: 0px;
 `;
@@ -34,18 +36,18 @@ const Name = styled('input')`
   width: 200px;
   height: 30px;
   box-sizing: border-box;
-  padding: -0px
+  padding: -0px;
   ::placeholder {
     color: grey;
     font-size: 20px;
   }
+  outline: none;
 `;
-
-const ContactWrapper = styled('form')``;
 
 const EmailInput = styled('input')`
   width: 450px;
   height: 30px;
+  outline: none;
 `;
 
 const TextBox = styled('textarea')`
@@ -56,6 +58,7 @@ const TextBox = styled('textarea')`
   border: 1px solid #ccc;
   border-radius: 4px;
   resize: vertical;
+  outline: none;
 `;
 
 const SubmitButton = styled('input')`
@@ -68,6 +71,7 @@ const SubmitButton = styled('input')`
   text-decoration: none;
   margin: 4px 2px;
   cursor: pointer;
+  outline: none;
 `;
 
 class Contact extends Component {
