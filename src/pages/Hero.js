@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 import { DarkBlue, LightGray, Blue, LimeGreen } from '../colors';
 import '../App.css';
+import russ from '../assets/russ.png';
 
 const Hero = styled('div')`
   background-color: ${DarkBlue};
@@ -46,6 +47,7 @@ class HeroPage extends Component {
           <B>{'helloMyNameIs'}</B>
           <G>{';'}</G>
         </Title>
+        <img src={russ} alt="" />
       </Hero>
     );
   }
